@@ -6,7 +6,7 @@ const app = express();
 
 app.get("/",(req,res,next) => {
   console.log("i am coming from path /");
-  res.send('<h1>Welcome To Chpater 9 Practise Set');
+  res.send('<h1>Adding body parser for getting all data sumbmitted by user</h1>');
  
 })
 app.get("/contact-us",(req,res,next) => {
