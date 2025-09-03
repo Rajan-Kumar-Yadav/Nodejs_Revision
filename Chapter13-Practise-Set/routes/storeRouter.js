@@ -1,0 +1,17 @@
+// core module
+const path = require("path");
+
+const express = require("express");
+
+const storeRouter = express.Router();
+
+// local module
+const rootDir = require("../utils/pathUtils");
+const storeController = require("../controllers/storeController");
+
+storeRouter.get("/", storeController.getIndex);
+storeRouter.get("/homes", storeController.getHomes);
+storeRouter.get("/favourites", storeController.getFavouriteList);
+storeRouter.get("/bookings", storeController.getBookings);
+
+module.exports = storeRouter;
